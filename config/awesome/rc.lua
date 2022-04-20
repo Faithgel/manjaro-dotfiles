@@ -24,7 +24,7 @@ theme = themes[2]
 beautiful.init(gfs.get_configuration_dir() .. "theme/" .. theme .."/theme.lua")
 
 -- 🌊 Default Applications
-terminal = "alacritty"
+terminal = "gnome-terminal"
 editor = terminal .. " -e " .. os.getenv("EDITOR")
 vscode = "code"
 browser = "firefox"
@@ -33,8 +33,8 @@ file_manager = "nautilus"
 music_client = terminal .. " --class music -e ncmpcpp"
 
 -- 🌏 Weather API
-openweathermap_key = "" -- API Key
-openweathermap_city_id = "" -- City ID
+openweathermap_key = "b4bb17999de84d5be16971fd71d85364" -- API Key
+openweathermap_city_id = "3895088" -- City ID
 weather_units = "metric" -- Unit
 
 -- 🖥 Screen
@@ -56,3 +56,6 @@ require("ui")
 collectgarbage("setpause", 110)
 collectgarbage("setstepmul", 1000)
 
+-- Wallpaper
+local wallpaper_command="feh --bg-fill /home/faithgel/Descargas/bg.png"
+os.execute(wallpaper_command)
